@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Micro+5&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <title>Calculadora de Seguro</title>
+</head>
+<body>
+    <div id="background"></div>
+    <div class="calculator">
+        <div class="display"><span id="result">0</span></div>
+        <div class="tooltip" id="tooltipResult"></div>
+        
+        <label for="dateContainer">Período do Seguro:</label>
+        <div class="date-container" id="dateContainer">
+            <input type="date" id="startDate" placeholder="Data Inicial">
+            <input type="date" id="endDate" placeholder="Data Final">
+        </div>
+
+        <label for="valueContainer">Dados do Seguro:</label>
+        <div class="value-container">
+            <input type="number" id="insuredAmount" placeholder="Importância Segurada">
+            <input type="number" id="premium" placeholder="Prêmio">
+        </div>
+
+        <div class="buttons">
+            <button id="calculateBtn">Calcular</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+        <!-- <button>
+            <span class="button_top"> Button
+            </span>
+        </button> -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

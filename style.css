@@ -1,0 +1,163 @@
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://www.grupomarquise.com.br/wp-content/uploads/2023/06/grupo-marquise.jpg) center center fixed; 
+    background-size: cover;
+    /* background-size: 250px; */
+    /* background-repeat: repeat; */
+    filter: blur(15px); /* Ajuste o valor do desfoque conforme necessário */
+    z-index: -1; /* Coloca o elemento atrás de outros elementos */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* background-image: linear-gradient(to left, #ff6662, #f98062, #ff9065); */
+}
+.tooltip {
+    position: absolute;
+    left: 800px;
+    top: 150px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#result:hover + .tooltip {
+    opacity: 0;
+    visibility: visible;
+}   
+
+.calculator {
+    width: 305px;
+    height: 400px;
+    background-color: #f0f0f0;
+    opacity: 0.9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 6px 10px 20px 4px #1b0e06;
+}
+
+.display {
+    font-size: 1.5em;
+    font-family: "Nunito", sans-serif;
+    background-color: #d8d8d8;
+    padding: 10px;
+    text-align: right;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.date-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.date-container input[type="date"] {
+    width: calc(48% - 5px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+}
+
+label {
+    font-family: "Nunito", sans-serif;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.value-container {
+    display: flexbox;
+    gap: 10px;
+}
+
+.value-container input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-family: "Nunito", sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ddd;
+    transform: translateY(-0.33em); 
+}
+
+button:active {
+    background-color: #c5c2c2;
+    color: #333;
+    transform: translateY(0);
+    box-shadow: 0 2px #cac5b6;
+}
+/* button { 
+     Variables 
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+  }
+  
+  .button_top {
+    display: flex;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+  }
+  
+  button:hover .button_top {
+     Pull the button upwards when hovered 
+    transform: translateY(-0.33em);
+  }
+  
+  button:active .button_top {
+     Push the button downwards when pressed 
+    transform: translateY(0);
+  }*/
